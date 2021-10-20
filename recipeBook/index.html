@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title id="Home"> Alexis Gordon Project 3 Homepage </title>
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+         <script>  
+            $(document).ready(function(){
+                //filtering recipes
+                jQuery.expr[':'].containi = function(a, i, m) {
+                    return jQuery(a).text().toUpperCase()
+                        .indexOf(m[3].toUpperCase()) >= 0;
+                };
+
+                $("#myInput").keyup(function() {
+                    //retrieve input target value
+                    var value = $(this).val();
+                
+                    //filter by recipe div
+                    $(".recipe_homepage").hide().filter(':containi("' + value + '")').show();
+                });
+
+
+                //automatic slideshow
+                var slideIndex = 0;
+                showSlides();
+
+                function showSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) {slideIndex = 1}
+                    for (i = 0; i < dots.length; i++){
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";
+                    dots[slideIndex-1].className += " active";
+                    setTimeout(showSlides, 3000); // Change image every 2 seconds
+                }
+            });
+        </script>
+
+    </head>
+    <body>
+        <nav>
+            <div class="logo"> 
+                <input type="image" src="assets/images/Gordon_recipe_logo.png" onclick="window.location.href='index.html';" alt="filter bar" />
+            </div>
+
+            <div class="navbar">
+                <a class="active" href="#home"> Home </a>
+                <a href="appetizer.html"> Appetizer </a>
+                <a href="entree.html"> Entree </a>
+                <a href="dessert.html"> Dessert </a>
+                <a href="references.html"> References </a>
+            </div>
+
+            <div class="filter"> 
+                <input id="myInput" type="text" placeholder="Filter Recipes...">
+            </div>
+        </nav>
+
+        <main>
+            <div class="slideshow">
+                <div class="mySlides fade">
+                    <img src="assets/images/slideshow/homemade_pizza_cpk_compressed.jpg" alt="cpk_pizza" style="width:100%">
+                    <div class="text"> <a href="entree.html#cpk_pizza"> Homemade Pizza (CPK) </a> </div>
+                  </div>
+                
+                  <div class="mySlides fade">
+                    <img src="assets/images/slideshow/baked_ziti_compressed.jpg" alt="baked_ziti" style="width:100%">
+                    <div class="text"> <a href="entree.html#baked_ziti"> Baked Ziti </a> </div>
+                  </div>
+                
+                  <div class="mySlides fade">
+                    <img src="assets/images/slideshow/cheesecake_compressed.jpg" alt="larry_cheesecake" style="width:100%">
+                    <div class="text"> <a href="dessert.html#larry_cheesecake"> Larry's Cheesecake </a> </div>
+                  </div>
+
+                  <div class="mySlides fade">
+                    <img src="assets/images/slideshow/steak_compressed.jpg" alt="steak_sauce" style="width:100%">
+                    <div class="text"> <a href="entree.html#steak_sauce"> Steak with Rosemary Port Sauce </a> </div>
+                  </div>
+
+                  <div class="mySlides fade">
+                    <img src="assets/images/slideshow/cinnamon_rolls_compressed.jpg" alt="cinnamon_roll" style="width:100%">
+                    <div class="text"> <a href="dessert.html#cinnamon_roll"> Papa Ben's Cinnamon Rolls </a> </div>
+                  </div>
+                
+                <!-- The dots/circles -->
+                <div class="dots">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+            </div>
+
+            <div class="welcome">
+                <h1> Welcome to the Gordon Recipe Cook Book! </h1>
+                <p> Delicious homemade recipes sure to make your mouth water! From Papa Ben's 
+                    Cinnamon Rolls covered in a smooth, shiny caramel to a healthy and delicious pizza dough 
+                    from California Pizza Kitchen, there is a recipe for every family. We invite 
+                    you to explore our site's many recipes. All are available for digital download. 
+                </p>
+                <p> Check out the author's original homepage website <a href="../index.html"> here </a> and some highlighted recipes below! </p>
+
+            </div>
+
+
+            <div class="recipes_homepage">
+
+                <div class="recipe_homepage">
+                    <a class="explore" href="dessert.html#cinnamon_roll"> Explore </a>
+                    <div class="homepage_visual"> 
+                        <video controls poster="assets/images/recipes/cinnamon_rolls.jpg">
+                            <source src="assets/media/cinnamon_rolls.mp4" type="video/mp4">
+                            Your browser does not support the video element.
+                          </video>
+                    </div>
+                    <div class="description"> 
+                        <h3> Papa Ben's Cinnamon Rolls </h3> 
+                        <p> A light and fluffy soft bread roll, risen to perfection and swirled with cinnamon and sugar. 
+                            Topped off with a delicious, shimmering caramel sauce, it is a dessert sure to make your mouth 
+                            water. 
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="recipe_homepage">
+                    <a class="explore" href="dessert.html#apple_pie"> Explore </a>
+                    <div class="homepage_visual"> 
+                        <video controls poster="assets/images/recipes/apple_pie.jpg">
+                            <source src="assets/media/apple_pie.mp4" type="video/mp4">
+                            Your browser does not support the video element.
+                        </video>
+                    </div>
+                    <div class="description"> 
+                        <h3> Papa Ben's Apple Pie </h3> 
+                        <p> A buttery and flaky crust filled with a flavorful apple slice filling. Seasoned with cinnamon and 
+                            sugar, it is a baked dessert sure to bring a smile to your face. </p>
+                    </div>
+                </div>
+
+                <div class="recipe_homepage">
+                    <a class="explore" href="entree.html#baked_ziti"> Explore </a>
+                    <div class="homepage_visual"> 
+                        <img src="assets/images/recipes/baked_ziti.jpg" alt="baked_ziti" /> 
+                    </div>
+                    <div class="description"> 
+                        <h3> Baked Ziti </h3> 
+                        <p> A cheesy tomato penne entree complete with a creamy comfort sauce and finished off with a crispy baked top. </p>
+                    </div>
+                </div>
+
+                <div class="recipe_homepage">
+                    <a class="explore" href="appetizer.html#bread_bowl"> Explore </a>
+                    <div class="homepage_visual"> 
+                        <img src="assets/images/recipes/bread_bowl.jpg" alt="bread_bowl" /> 
+                    </div>
+                    <div class="description"> 
+                        <h3> Jill's Bread Bowl </h3> 
+                        <p> A rich appetizer showcasing a baked sour dough bread shell filled with a creamy smoked ham and cheese dip, 
+                            sure to make a great addition to any game day party. </p>
+                    </div>
+                </div>
+
+                <div class="recipe_homepage">
+                    <a class="explore" href="entree.html#meatloaf"> Explore </a>
+                    <div class="homepage_visual"> 
+                        <img src="assets/images/recipes/meatloaf.jpg" alt="meatloaf" /> 
+                    </div>
+                    <div class="description"> 
+                        <h3> Karen's Meatloaf </h3> 
+                        <p> A hearty entree comprised of beef and various flavors from garlic and onion to dried sage and mustard. It's a meaty 
+                            meal sure to entice even those who doubt its exquisite flavor profile. </p>
+                    </div>
+                </div>
+
+                <div class="recipe_homepage">
+                    <a class="explore" href="appetizer.html#spinach_salad"> Explore </a>
+                    <div class="homepage_visual"> 
+                        <img src="assets/images/recipes/spinach_salad.jpg" alt="spinach_salad" /> 
+                    </div>
+                    <div class="description"> 
+                        <h3> Strawberry Spinach Salad </h3> 
+                        <p> A bright and flavorful starter of spinach tossed with a light dressing and strawberries. A sweet, springtime snack 
+                            sure to make a great addition to any picnic or spring party. </p>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+        <footer>
+            <p class="copyright"> &copy; Alexis Gordon   April 2020 </p>
+        </footer>
+    </body>
+</html>

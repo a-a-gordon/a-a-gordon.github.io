@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title id="Home"> Alexis Gordon Project 3 Entree </title>
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+         <script>   
+            //filtering recipes
+            $(document).ready(function(){
+               jQuery.expr[':'].containi = function(a, i, m) {
+                    return jQuery(a).text().toUpperCase()
+                        .indexOf(m[3].toUpperCase()) >= 0;
+                };
+
+                $("#myInput").keyup(function() {
+                    //retrieve input target value
+                    var value = $(this).val();
+                
+                    //filter by section (recipe)
+                    $("section").hide().filter(':containi("' + value + '")').show();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <input type="image" src="assets/images/Gordon_recipe_logo.png" onclick="window.location.href='index.html';" alt="filter bar" />
+            </div>
+            <div class="navbar">
+                <a href="index.html"> Home </a>
+                <a href="appetizer.html"> Appetizer </a>
+                <a class="active" href="#entree"> Entree </a>
+                <a href="dessert.html"> Dessert </a>
+                <a href="references.html"> References </a>
+            </div>
+            <div class="filter">
+                <input id="myInput" type="text" placeholder="Filter Recipes...">
+            </div>
+        </nav>
+        <main>
+            <div class="recipes">
+
+                <section>
+                    <div class="title">
+                        <h2 id="baked_ziti"> Baked Ziti </h2>
+                        <a class="printable" href="assets/images/printable_pdfs/baked_ziti.pdf"> Print Recipe </a>
+                    </div>
+                    <div class="recipe">
+                        <div class="section_visual">
+                            <img src="assets/images/recipes/baked_ziti.jpg" alt="baked_ziti" /> 
+                        </div>
+                        <div class="content">
+                            <div class="instructions">
+                                <div class="ingredients">
+                                    <h3> Ingredients </h3> 
+                                    <div class="grid">
+                                        <div class="grid-item"> 1 lbs </div>
+                                        <div class="grid-item"> Ziti noodles </div>
+                                        <div class="grid-item"> 12 oz </div>
+                                        <div class="grid-item"> Skim ricotta </div>
+                                        <div class="grid-item"> 12 oz </div>
+                                        <div class="grid-item"> Low fat sour cream </div>
+                                        <div class="grid-item"> 1 lbs </div>
+                                        <div class="grid-item"> Mozzarella cheese </div>
+                                        <div class="grid-item"> 1 </div>
+                                        <div class="grid-item"> Egg (beaten) </div>
+                                        <div class="grid-item"> 1 jar </div>
+                                        <div class="grid-item"> Pasta sauce </div>
+                                        <div class="grid-item"> 1/4 cup </div>
+                                        <div class="grid-item"> Parmesan cheese </div>
+                                    </div>
+                                </div>
+                                <div class="steps">
+                                    <h3> Steps </h3> 
+                                    <ol>
+                                        <li> Make the pasta. </li>
+                                        <li> Mix pasta, ricotta, sour cream, mozzarella, egg and most of pasta sauce in a bowl. </li> 
+                                        <li> Pour bowl contents into a sprayed pan. </li>
+                                        <li> Cover with the rest of the sauce and then parmesan cheese. </li>
+                                        <li> Bake for 30-35 minutes at 375°F. </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="title">
+                        <h2 id="cpk_pizza"> California Pizza Kitchen Homemade Pizza </h2>
+                        <a class="printable" href="assets/images/printable_pdfs/cpk_pizza.pdf"> Print Recipe </a>
+                    </div>
+                    <div class="recipe">
+                        <div class="section_visual">
+                            <img src="assets/images/recipes/cpk_pizza.jpg" alt="cpk_pizza" /> 
+                        </div>
+                        <div class="content">
+                            <div class="instructions">
+                                <div class="ingredients">
+                                    <h3> Ingredients </h3> 
+                                    <div class="grid">
+                                        <div class="grid-item"> 1 pack </div>
+                                        <div class="grid-item"> Yeast </div>
+                                        <div class="grid-item"> 2 cups + 2 tsp </div>
+                                        <div class="grid-item"> Warm water </div>
+                                        <div class="grid-item"> 2 cups </div>
+                                        <div class="grid-item"> Bread flour </div>
+                                        <div class="grid-item"> 3 cups </div>
+                                        <div class="grid-item"> Wheat flour </div>
+                                        <div class="grid-item"> 2 tbsp + 4 tsp </div>
+                                        <div class="grid-item"> Honey </div>
+                                        <div class="grid-item"> 2 tsp </div>
+                                        <div class="grid-item"> Salt </div>
+                                        <div class="grid-item"> 2 tbsp </div>
+                                        <div class="grid-item"> Olive oil </div>
+                                        <div class="grid-item"> 1 jar </div>
+                                        <div class="grid-item"> Tomato sauce </div>
+                                        <div class="grid-item"> Some </div>
+                                        <div class="grid-item"> Cheese(s) of choice </div>
+                                    </div>
+                                </div>
+                                <div class="steps">
+                                    <h3> Steps </h3> 
+                                    <ol>
+                                        <li> Put flours, salt, honey and oil into a mixing bowl. </li>
+                                        <li> Meanwhile mix yeast and warm water in a separate bowl carefully with your finger. </li> 
+                                        <li> Dump yeast mixture into main bowl and mix until dough forms. </li>
+                                        <li> Split dough into two balls and put in greased pan. Cover and let rise for 1-2 hours. </li>
+                                        <li> Roll dough ball out and add sauce, cheese, other topppings and spices. </li>
+                                        <li> Bake for 10 minutes at 425°F. </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="title">
+                        <h2 id="carrabba_fettuccine"> Carrabba's Chicken and Fettuccine Alfredo </h2>
+                        <a class="printable" href="assets/images/printable_pdfs/carrabba_fettuccine.pdf"> Print Recipe </a>
+                    </div>
+                    <div class="recipe">
+                        <div class="section_visual">
+                            <img src="assets/images/recipes/carrabba_fettuccine.jpg" alt="carrabba_fettuccine" /> 
+                        </div>
+                        <div class="content">
+                            <div class="instructions">
+                                <div class="ingredients">
+                                    <h3> Ingredients </h3> 
+                                    <div class="grid">
+                                        <div class="grid-item"> 2 </div>
+                                        <div class="grid-item"> Chicken breasts (boneless and skinless) </div>
+                                        <div class="grid-item"> 3 tbsp </div>
+                                        <div class="grid-item"> Balsamic vinegar </div>
+                                        <div class="grid-item"> 2 tbsp </div>
+                                        <div class="grid-item"> Extra virgin olive oil </div>
+                                        <div class="grid-item"> 2 tbsp </div>
+                                        <div class="grid-item"> Fresh basil leaves </div>
+                                        <div class="grid-item"> "for taste" </div>
+                                        <div class="grid-item"> Salt and pepper </div>
+                                        <div class="grid-item"> 2 tbsp </div>
+                                        <div class="grid-item"> Butter </div>
+                                        <div class="grid-item"> 1 </div>
+                                        <div class="grid-item"> Shallots (medium) </div>
+                                        <div class="grid-item"> 1 tsp </div>
+                                        <div class="grid-item"> Garlic (minced) </div>
+                                        <div class="grid-item"> 1/4 cup (may need more) </div>
+                                        <div class="grid-item"> Parmesan cheese (grated) </div>
+                                        <div class="grid-item"> 1 cup </div>
+                                        <div class="grid-item"> Half and half or heavy cream </div>
+                                        <div class="grid-item"> 1/2 cup </div>
+                                        <div class="grid-item"> Frozen peas </div>
+                                        <div class="grid-item"> 1/2 (9oz) pack </div>
+                                        <div class="grid-item"> Fresh fettuccine </div>
+                                    </div>
+                                </div>
+                                <div class="steps">
+                                    <h3> Steps </h3> 
+                                    <ol>
+                                        <li> Combine vinegar, oil and basil. Pour over chicken and marinate overnight in the fridge. </li>
+                                        <li> Grill chicken or bake for 30 minutes at 350°F. Let it rest. </li> 
+                                        <li> Peel and finely chop shallots. Saute in butter for 1 minute. Add garlic and saute until fragrant. </li>
+                                        <li> Add cream, salt and pepper. </li>
+                                        <li> Boil to reduce slightly to light sauce consistency (a bit liquidy). </li>
+                                        <li> Add peas and parmesan cheese and cook another 2 minutes. </li>
+                                        <li> Cook pasta and thinly slice chicken. </li>
+                                        <li> Toss pasta with sauce and add chicken. </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="title">
+                        <h2 id="crockpot_chicken"> Claudine Crockpot Chicken </h2>
+                        <a class="printable" href="assets/images/printable_pdfs/crockpot_chicken.pdf"> Print Recipe </a>
+                    </div>
+                    <div class="recipe">
+                        <div class="section_visual">
+                            <img src="assets/images/recipes/crockpot_chicken.jpg" alt="crockpot_chicken" /> 
+                        </div>
+                        <div class="content">
+                            <div class="instructions">
+                                <div class="ingredients">
+                                    <h3> Ingredients </h3> 
+                                    <div class="grid">
+                                        <div class="grid-item"> 1 whole </div>
+                                        <div class="grid-item"> Chicken </div>
+                                        <div class="grid-item"> 2 tsp </div>
+                                        <div class="grid-item"> Salt </div>
+                                        <div class="grid-item"> 2 tsp </div>
+                                        <div class="grid-item"> Paprika </div>
+                                        <div class="grid-item"> 1 tsp </div>
+                                        <div class="grid-item"> Cayenne pepper </div>
+                                        <div class="grid-item"> 1 tsp </div>
+                                        <div class="grid-item"> Onion powder </div>
+                                        <div class="grid-item"> 1 tsp </div>
+                                        <div class="grid-item"> Thyme </div>
+                                        <div class="grid-item"> 1/2 tsp </div>
+                                        <div class="grid-item"> Garlic powder </div>
+                                        <div class="grid-item"> 1 tsp </div>
+                                        <div class="grid-item"> Black pepper </div>
+                                        <div class="grid-item"> 1 cup </div>
+                                        <div class="grid-item"> Onion (chopped) </div>
+                                    </div>
+                                </div>
+                                <div class="steps">
+                                    <h3> Steps </h3> 
+                                    <ol>
+                                        <li> Combine spices and rub all over chicken. </li>
+                                        <li> Put onion on bottom of the crockpot and add chicken (breast down). </li> 
+                                        <li> Cook on low 4-8 hours. </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="title">
+                        <h2 id="meatballs_tomato_sauce"> Grandma's Meatballs and Tomato Sauce </h2>
+                        <a class="printable" href="assets/images/printable_pdfs/meatballs_tomato_sauce.pdf"> Print Recipe </a>
+                    </div>
+                    <div class="recipe">
+                        <div class="section_visual">
+                            <img src="assets/images/recipes/meatballs_tomato_sauce.jpg" alt="meatballs_tomato_sauce" /> 
+                        </div>
+                        <div class="content">
+                            <div class="instructions">
+                                <div class="ingredients">
+                                    <h3> Ingredients </h3> 
+                                    <div class="grid">
+                                        <div class="grid-item"> 3 lbs </div>
+                                        <div class="grid-item"> Meat mix (pork, beef and veal) </div>
+                                        <div class="grid-item"> 1 tsp (may need more) </div>
+                                        <div class="grid-item"> Salt </div>
+                                        <div class="grid-item"> 1 cup </div>
+                                        <div class="grid-item"> Pecorino romano cheese </div>
+                                        <div class="grid-item"> 1/2 head </div>
+                                        <div class="grid-item"> Parsley (finely chopped) </div>
+                                        <div class="grid-item"> 2 </div>
+                                        <div class="grid-item"> Eggs </div>
+                                        <div class="grid-item"> 1/2 loaf </div>
+                                        <div class="grid-item"> Italian bread </div>
+                                        <div class="grid-item"> &le; 1/4 cup </div>
+                                        <div class="grid-item"> Milk </div>
+                                        <div class="grid-item"> 12 cloves </div>
+                                        <div class="grid-item"> Garlic (minced) </div>
+                                        <div class="grid-item"> 6 cans (28oz) </div>
+                                        <div class="grid-item"> Cento San Marzano peeled tomatoes </div>
+                                        <div class="grid-item"> 3 cans </div>
+                                        <div class="grid-item"> Cento Pomato puree </div>
+                                    </div>
+                                </div>
+                                <div class="steps">
+                                    <h3> Steps </h3> 
+                                    <ol>
+                                        <li> First make the meatballs (about 50).  </li>
+                                        <li> Cut bread into small cubes and soak them in water (squeeze out). </li> 
+                                        <li> Add meats, 1 tsp of salt, cheese, parsley, eggs, bread, milk and garlic in a large bowl. Squish together. </li>
+                                        <li> Scoop into mini muffin pan and bake for 30 minutes at 375°F. </li>
+                                        <li> Set aside to add to sauce. Now make the sauce. </li>
+                                        <li> Hand grind the tomatoes in a large pot. Add the tomato puree and salt for taste. </li>
+                                        <li> Heat sauce until almost boiling. Turn down to simmer. Add meatballs. </li>
+                                        <li> Cook for 8 hours on low with the lid mostly on. Stir every hour. </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="title">
+                        <h2 id="meatloaf"> Karen's Meatloaf </h2>
+                        <a class="printable" href="assets/images/printable_pdfs/meatloaf.pdf"> Print Recipe </a>
+                    </div>
+                    <div class="recipe">
+                        <div class="section_visual">
+                            <img src="assets/images/recipes/meatloaf.jpg" alt="meatloaf" /> 
+                        </div>
+                        <div class="content">
+                            <div class="instructions">
+                                <div class="ingredients">
+                                    <h3> Ingredients </h3> 
+                                    <div class="grid">
+                                        <div class="grid-item"> 1 lbs </div>
+                                        <div class="grid-item"> Beef </div>
+                                        <div class="grid-item"> 1 clove </div>
+                                        <div class="grid-item"> Garlic (minced) </div>
+                                        <div class="grid-item"> 1 </div>
+                                        <div class="grid-item"> Onion (small) </div>
+                                        <div class="grid-item"> 2 slices </div>
+                                        <div class="grid-item"> Bread </div>
+                                        <div class="grid-item"> 1/4 cup </div>
+                                        <div class="grid-item"> Milk </div>
+                                        <div class="grid-item"> 2 tsp </div>
+                                        <div class="grid-item"> Worcester sauce </div>
+                                        <div class="grid-item"> 1/4 tsp </div>
+                                        <div class="grid-item"> Dried sage </div>
+                                        <div class="grid-item"> 1/4 tsp </div>
+                                        <div class="grid-item"> Salt </div>
+                                        <div class="grid-item"> 1/4 tsp </div>
+                                        <div class="grid-item"> Dried mustard </div>
+                                        <div class="grid-item"> 1/8 tsp </div>
+                                        <div class="grid-item"> Pepper </div>
+                                        <div class="grid-item"> 1 </div>
+                                        <div class="grid-item"> Egg </div>
+                                        <div class="grid-item"> 1/3 cup </div>
+                                        <div class="grid-item"> Ketsup </div>
+                                    </div>
+                                </div>
+                                <div class="steps">
+                                    <h3> Steps </h3> 
+                                    <ol>
+                                        <li> Preheat the oven to 350°F. Mix beef, garlic and chopped onion. </li>
+                                        <li> Tear bread and add to mixture. </li> 
+                                        <li> Add milk, worcester sauce, sage, salt, mustard, pepper and egg. Mix. </li>
+                                        <li> Place mix in a baking pan. Spread ketsup on it. </li>
+                                        <li> Bake 50-60 minutes. </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section>
+                    <div class="title">
+                        <h2 id="pulled_pork"> Slow Cooker Pulled Pork </h2>
+                        <a class="printable" href="assets/images/printable_pdfs/pulled_pork.pdf"> Print Recipe </a>
+                    </div>
+                    <div class="recipe">
+                        <div class="section_visual">
+                            <img src="assets/images/recipes/pulled_pork.jpg" alt="pulled_pork" /> 
+                        </div>
+                        <div class="content">
+                            <div class="instructions">
+                                <div class="ingredients">
+                                    <h3> Ingredients </h3> 
+                                    <div class="grid">
+                                        <div class="grid-item"> 1 </div>
+                                        <div class="grid-item"> Pork loin </div>
+                                        <div class="grid-item"> 1 </div>
+                                        <div class="grid-item"> Medium onion </div>
+                                        <div class="grid-item"> 1/2 cup </div>
+                                        <div class="grid-item"> Ketsup </div>
+                                        <div class="grid-item"> 1/3 cup </div>
+                                        <div class="grid-item"> Apple cider vinegar </div>
+                                        <div class="grid-item"> 1/4 cup </div>
+                                        <div class="grid-item"> Brown sugar </div>
+                                        <div class="grid-item"> 1/4 cup </div>
+                                        <div class="grid-item"> Tomato paste </div>
+                                        <div class="grid-item"> 2 tbsp </div>
+                                        <div class="grid-item"> Paprika </div>
+                                        <div class="grid-item"> 2 tbsp </div>
+                                        <div class="grid-item"> Worcestershire sauce </div>
+                                        <div class="grid-item"> 2 tbsp </div>
+                                        <div class="grid-item"> Mustard </div>
+                                        <div class="grid-item"> 1 1/2 tsp </div>
+                                        <div class="grid-item"> Salt </div>
+                                        <div class="grid-item"> 1 1/4 tsp </div>
+                                        <div class="grid-item"> Pepper </div>
+                                    </div>
+                                </div>
+                                <div class="steps">
+                                    <h3> Steps </h3> 
+                                    <ol>
+                                        <li> Mix ingredients and put in a slow cooker </li>
+                                        <li> Cook on low for 8 hours. </li> 
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="title">
+                        <h2 id="steak_sauce"> Steak with Rosemary Port Sauce </h2>
+                        <a class="printable" href="assets/images/printable_pdfs/steak_sauce.pdf"> Print Recipe </a>
+                    </div>
+                    <div class="recipe">
+                        <div class="section_visual">
+                            <img src="assets/images/recipes/steak_sauce.jpg" alt="steak_sauce" /> 
+                        </div>
+                        <div class="content">
+                            <div class="instructions">
+                                <div class="ingredients">
+                                    <h3> Ingredients </h3> 
+                                    <div class="grid">
+                                        <div class="grid-item"> 1 tbsp </div>
+                                        <div class="grid-item"> Olive oil </div>
+                                        <div class="grid-item"> 2 tsp </div>
+                                        <div class="grid-item"> Worcestershire sauce </div>
+                                        <div class="grid-item"> 2 </div>
+                                        <div class="grid-item"> Steaks (thin) </div>
+                                        <div class="grid-item"> 1 tbsp </div>
+                                        <div class="grid-item"> Butter </div>
+                                        <div class="grid-item"> 1 sprig </div>
+                                        <div class="grid-item"> Rosemary </div>
+                                        <div class="grid-item"> 1 clove </div>
+                                        <div class="grid-item"> Garlic (big and minced) </div>
+                                        <div class="grid-item"> 1/4 cup </div>
+                                        <div class="grid-item"> Ruby port </div>
+                                    </div>
+                                </div>
+                                <div class="steps">
+                                    <h3> Steps </h3> 
+                                    <ol>
+                                        <li> Mix oil and worcestershire sauce in a bowl. Smear mixture over steaks. </li>
+                                        <li> Heat heavy-based frying pan over medium-high heat and cook steaks for 3 minutes per side. </li>
+                                        <li> Wrap steaks in aluminum foil and rest on a warm plate while you make the sauce. </li>
+                                        <li> While pan is still hot, turn down to low, add butter, let it melt, finely chop rosemary and add it to the pan. </li>
+                                        <li> Add garlic to the pan, pour in the port and reduce it slightly. </li> 
+                                        <li> Unwrap steaks on serving plates. Use sauce as wanted. </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+        <footer>
+            <p class="copyright"> &copy; Alexis Gordon   April 2020 </p>
+        </footer>
+    </body>
+</html>

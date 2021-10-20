@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title id="Home"> Alexis Gordon Project 3 Appetizer </title>
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+         <script>   
+            //filtering recipes
+            $(document).ready(function(){
+                jQuery.expr[':'].containi = function(a, i, m) {
+                    return jQuery(a).text().toUpperCase()
+                        .indexOf(m[3].toUpperCase()) >= 0;
+                };
+
+                $("#myInput").keyup(function() {
+                    //retrieve input target value
+                    var value = $(this).val();
+                
+                    //filter by section (recipe)
+                    $("section").hide().filter(':containi("' + value + '")').show();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <input type="image" src="assets/images/Gordon_recipe_logo.png" onclick="window.location.href='index.html';" alt="filter bar" />
+            </div>
+            <div class="navbar">
+                <a href="index.html"> Home </a>
+                <a class="active" href="#appetizer"> Appetizer </a>
+                <a href="entree.html"> Entree </a>
+                <a href="dessert.html"> Dessert </a>
+                <a href="references.html"> References </a>
+            </div>
+            <div class="filter">
+                <input id="myInput" type="text" placeholder="Filter Recipes...">
+            </div>
+        </nav>
+        <main>
+            <div class="recipes">
+
+                <section>
+                    <div class="title">
+                        <h2 id="cpk_salad"> California Pizza Kitchen Chopped Salad </h2>
+                        <a class="printable" href="assets/images/printable_pdfs/cpk_salad.pdf"> Print Recipe </a>
+                    </div>
+                    <div class="recipe">
+                        <div class="section_visual">
+                            <img src="assets/images/recipes/cpk_salad.jpg" alt="cpk_salad" /> 
+                        </div>
+                        <div class="content">
+                            <div class="instructions">
+                                <div class="ingredients">
+                                    <h3> Ingredients </h3> 
+                                    <div class="grid">
+                                        <div class="grid-item"> 1/2 tsp </div>
+                                        <div class="grid-item"> Garlic (minced) </div>
+                                        <div class="grid-item"> 1 tsp </div>
+                                        <div class="grid-item"> Shallots (minced) </div>
+                                        <div class="grid-item"> 1 tbsp </div>
+                                        <div class="grid-item"> Dijon mustard </div>
+                                        <div class="grid-item"> 3/4 tsp </div>
+                                        <div class="grid-item"> Dried oregano </div>
+                                        <div class="grid-item"> 1 tsp </div>
+                                        <div class="grid-item"> Dried parsley </div>
+                                        <div class="grid-item"> 1/4 tsp </div>
+                                        <div class="grid-item"> Black pepper </div>
+                                        <div class="grid-item"> 1/3 tsp </div>
+                                        <div class="grid-item"> Kosher salt </div>
+                                        <div class="grid-item"> 1/3 cup </div>
+                                        <div class="grid-item"> Red wine vinegar </div>
+                                        <div class="grid-item"> 2/3 cup </div>
+                                        <div class="grid-item"> Olive oil (mild flavor) </div>
+                                        <div class="grid-item"> 1 1/2 tbsp </div>
+                                        <div class="grid-item"> Parmesan cheese (grated) </div>
+                                        <div class="grid-item"> 1/2 head </div>
+                                        <div class="grid-item"> Lettuce (Iceberg/Romaine)</div>
+                                        <div class="grid-item"> 6 leaves </div>
+                                        <div class="grid-item"> Basil (finely chopped) </div>
+                                        <div class="grid-item"> 1 1/2 cups </div>
+                                        <div class="grid-item"> Shredded mozzarella cheese </div>
+                                        <div class="grid-item"> 2 cups </div>
+                                        <div class="grid-item"> Tomatoes (diced) </div>
+                                        <div class="grid-item"> 1 1/2 cups </div>
+                                        <div class="grid-item"> Turkey (diced) </div>
+                                        <div class="grid-item"> 1/4 cup </div>
+                                        <div class="grid-item"> Salami (thin strips) </div>
+                                        <div class="grid-item"> 1 tbsp </div>
+                                        <div class="grid-item"> Scallions (chopped) </div>
+                                    </div>
+                                </div>
+                                <div class="steps">
+                                    <h3> Steps </h3> 
+                                    <ol>
+                                        <li> Toss 1/4 head of iceberg (cut in 1/8 inch strips), 1/4 head of romaine (cut in 1/8 inch strips), basil, tomatoes, turkey, salami and scallions together in a bowl. </li>
+                                        <li> Chill in fridge. </li>
+                                        <li> Whisk rest of ingredients (dressing ingredients) together in a bowl. </li> 
+                                        <li> Chill in fridge for an hour. </li>
+                                        <li> Just before serving, toss dressing with salad on individual plates. </li>
+                                        <li> Serves 2 for a main dish and 4 for small side dishes. </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="title">
+                        <h2 id="caesar_salad"> Chicken Caesar Salad </h2>
+                        <a class="printable" href="assets/images/printable_pdfs/caesar_salad.pdf"> Print Recipe </a>
+                    </div>
+                    <div class="recipe">
+                        <div class="section_visual">
+                            <img src="assets/images/recipes/caesar_salad.jpg" alt="caesar_salad" /> 
+                        </div>
+                        <div class="content">
+                            <div class="instructions">
+                                <div class="ingredients">
+                                    <h3> Ingredients </h3> 
+                                    <div class="grid">
+                                        <div class="grid-item"> 8 oz </div>
+                                        <div class="grid-item"> Chicken breast (skinless) </div>
+                                        <div class="grid-item"> 4 tsp </div>
+                                        <div class="grid-item"> Olive oil </div>
+                                        <div class="grid-item"> 4 slices </div>
+                                        <div class="grid-item"> Baguette (on diagonal, melba thin) </div>
+                                        <div class="grid-item"> 1 clove </div>
+                                        <div class="grid-item"> Garlic (minced) </div>
+                                        <div class="grid-item"> 2 heads </div>
+                                        <div class="grid-item"> Baby romaine lettuce </div>
+                                        <div class="grid-item"> 1 </div>
+                                        <div class="grid-item"> Large egg </div>
+                                        <div class="grid-item"> 1 handful </div>
+                                        <div class="grid-item"> Arugula and mustard cress </div>
+                                        <div class="grid-item"> 2 tbsp </div>
+                                        <div class="grid-item"> Parmesan (grated) </div>
+                                        <div class="grid-item"> 1 tbsp </div>
+                                        <div class="grid-item"> Sunflower seeds </div>
+                                        <div class="grid-item"> 2 tbsp </div>
+                                        <div class="grid-item"> Greek yogurt (fat free) </div>
+                                        <div class="grid-item"> 1 tsp </div>
+                                        <div class="grid-item"> Dijon mustard </div>
+                                        <div class="grid-item"> 1 tsp </div>
+                                        <div class="grid-item"> Malt vinegar </div>
+                                        <div class="grid-item"> Sprinkle </div>
+                                        <div class="grid-item"> Salt and pepper </div>
+                                    </div>
+                                </div>
+                                <div class="steps">
+                                    <h3> Steps </h3> 
+                                    <ol>
+                                        <li> Preheat the oven to 350°F. </li>
+                                        <li> Brush the chicken with 1 tsp of the olive oil. </li>
+                                        <li> On a hot grill pan, sear the chicken breast for 4-5 minutes before flipping over and doing the same for the other side. </li>
+                                        <li> While the chicken is searing, slice baguette on diagonal and place on a baking sheet. Brush a little olive oil. Toast the bread for 10 minutes until crisp. </li>
+                                        <li> Rub the bread with half of the minced garlic. </li>
+                                        <li> Once the chicken has strong grill marks, cover the pan with foil and place in the hot oven on a higher shelf for 15 minutes. </li>
+                                        <li> Meanwhile, wash and spin dry lettuce. </li>
+                                        <li> Carefully drop the egg into boiling water and boil for 5 minutes. Empty the boiling water and replace it with cold water. Let the egg stand in the cold water as you finish everything else. </li>
+                                        <li> Combine yogurt, the remaining half clove of garlic, dijon mustard, 3 tbsp of olive oil, and malt vinegar in a small mixing bowl. </li>
+                                        <li> Stir together with whisk and add salt and pepper for taste. Set aside. Remove chicken from oven when done. </li>
+                                        <li> Chop lettuce and place in a big bowl. Toss with dressing for a couple minutes to evenly distribute. Cut chicken into strips and toss with salad. </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="title">
+                        <h2 id="mac_salad"> Grammy's Mac Salad </h2>
+                        <a class="printable" href="assets/images/printable_pdfs/mac_salad.pdf"> Print Recipe </a>
+                    </div>
+                    <div class="recipe">
+                        <div class="section_visual">
+                            <img src="assets/images/recipes/mac_salad.jpg" alt="mac_salad" /> 
+                        </div>
+                        <div class="content">
+                            <div class="instructions">
+                                <div class="ingredients">
+                                    <h3> Ingredients </h3> 
+                                    <div class="grid">
+                                        <div class="grid-item"> 1 lbs </div>
+                                        <div class="grid-item"> Macaroni </div>
+                                        <div class="grid-item"> 1/2 cup </div>
+                                        <div class="grid-item"> Onion (chopped) </div>
+                                        <div class="grid-item"> 1/2 cup </div>
+                                        <div class="grid-item"> Celery (chopped) </div>
+                                        <div class="grid-item"> 1/2 cup </div>
+                                        <div class="grid-item"> Miracle whip </div>
+                                        <div class="grid-item"> 1/2 cup </div>
+                                        <div class="grid-item"> Salad dressing </div>
+                                        <div class="grid-item"> 6 </div>
+                                        <div class="grid-item"> Eggs (hard boiled) </div>
+                                        <div class="grid-item"> 1/2 tsp </div>
+                                        <div class="grid-item"> Black pepper </div>
+                                        <div class="grid-item"> 1/2 tsp </div>
+                                        <div class="grid-item"> Salt </div>
+                                        <div class="grid-item"> 1-2 tsp </div>
+                                        <div class="grid-item"> Vinegar </div>
+                                    </div>
+                                </div>
+                                <div class="steps">
+                                    <h3> Steps </h3> 
+                                    <ol>
+                                        <li> Cook and cool macaroni pasta. </li>
+                                        <li> Slice eggs. </li> 
+                                        <li> Put all ingredients together and them mix them up. </li>
+                                        <li> Chill before serving. </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="title">
+                        <h2 id="wedding_soup"> Italian Wedding Soup </h2>
+                        <a class="printable" href="assets/images/printable_pdfs/wedding_soup.pdf"> Print Recipe </a>
+                    </div>
+                    <div class="recipe">
+                        <div class="section_visual">
+                            <img src="assets/images/recipes/wedding_soup.jpg" alt="wedding_soup" /> 
+                        </div>
+                        <div class="content">
+                            <div class="instructions">
+                                <div class="ingredients">
+                                    <h3> Ingredients </h3> 
+                                    <div class="grid">
+                                        <div class="grid-item"> 1 tbsp </div>
+                                        <div class="grid-item"> Extra virgin olive oil </div>
+                                        <div class="grid-item"> 1 </div>
+                                        <div class="grid-item"> Small onion (chopped) </div>
+                                        <div class="grid-item"> 3 </div>
+                                        <div class="grid-item"> Carrots (finely chopped) </div>
+                                        <div class="grid-item"> 2 cloves </div>
+                                        <div class="grid-item"> Garlic (minced) </div>
+                                        <div class="grid-item"> 2 tsp </div>
+                                        <div class="grid-item"> Worcestershire sauce </div>
+                                        <div class="grid-item"> 2 tsp </div>
+                                        <div class="grid-item"> Fresh sage (finely chopped) </div>
+                                        <div class="grid-item"> 3 cups </div>
+                                        <div class="grid-item"> Chicken broth </div>
+                                        <div class="grid-item"> 1 </div>
+                                        <div class="grid-item"> Parmesan cheese rind </div>
+                                        <div class="grid-item"> 1 tbsp </div>
+                                        <div class="grid-item"> Grated parmesan </div>
+                                        <div class="grid-item"> 1/2 lbs </div>
+                                        <div class="grid-item"> Ground pork </div>
+                                        <div class="grid-item"> 3 tbsp </div>
+                                        <div class="grid-item"> Panko breadcrumbs </div>
+                                        <div class="grid-item"> 3/4 cup </div>
+                                        <div class="grid-item"> Orzo pasta </div>
+                                        <div class="grid-item"> 8 oz (abt 8 cups) </div>
+                                        <div class="grid-item"> Baby spinach </div>
+                                    </div>
+                                </div>
+                                <div class="steps">
+                                    <h3> Steps </h3> 
+                                    <ol>
+                                        <li> Heat the olive oil in a large pot over medium-high heat. Add onions and carrots, cooking until slightly softened (about 4 minutes). </li>
+                                        <li> Add half of the garlic, 1 tsp of the Worcestershire sauce and 1 tsp of the sage. Cook for 1 minute. </li>
+                                        <li> Add the chicken broth, 3 cups of water and the cheese rind. Bring to a boil, cover and reduce heat to medium. </li>
+                                        <li> Simmer until the vegetables are tender (about 7 minutes). </li>
+                                        <li> Meanwhile, mix the pork, breadcrumbs, grated parmesan, the remaining garlic, the remaining Worcestershire sauce and remaining sage in a bowl. </li>
+                                        <li> Form 1-inch meatballs. Increase the heat to medium high and bring the soup to a boil. </li>
+                                        <li> Stir in the orzo and cook 6 minutes. Add the meatballs and cook until they are firm and float to the top (about 4 more minutes). </li>
+                                        <li> Stir in the spinach and cook until wilted (about 1 more minute). Ladle the soup into bowls and top with parmesan. </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="title"> 
+                        <h2 id="bread_bowl"> Jill's Bread Bowl </h2>
+                        <a class="printable" href="assets/images/printable_pdfs/bread_bowl.pdf"> Print Recipe </a>
+                    </div>
+                    <div class="recipe">
+                        <div class="section_visual">
+                            <img src="assets/images/recipes/bread_bowl.jpg" alt="bread_bowl" /> 
+                        </div>
+                        <div class="content">
+                            <div class="instructions">
+                                <div class="ingredients">
+                                    <h3> Ingredients </h3> 
+                                    <div class="grid">
+                                        <div class="grid-item"> 1  </div>
+                                        <div class="grid-item"> Bread loaf (large circle) </div>
+                                        <div class="grid-item"> 1 8oz pack </div>
+                                        <div class="grid-item"> Shredded cheddar cheese </div>
+                                        <div class="grid-item"> 2 3oz packs  </div>
+                                        <div class="grid-item"> Cream cheese </div>
+                                        <div class="grid-item"> 1 1/2 cups  </div>
+                                        <div class="grid-item"> Sour cream </div>
+                                        <div class="grid-item"> 1 cup  </div>
+                                        <div class="grid-item"> Cooked ham (diced) </div>
+                                        <div class="grid-item"> 1/2 cup  </div>
+                                        <div class="grid-item"> Green onions (chopped) </div>
+                                        <div class="grid-item"> 1 tsp </div>
+                                        <div class="grid-item"> Worcestershire sauce </div>
+                                        <div class="grid-item"> 2 tbsp  </div>
+                                        <div class="grid-item"> Vegetable oil </div>
+                                        <div class="grid-item"> 1 tbsp </div>
+                                        <div class="grid-item"> Butter melted </div>
+                                    </div>
+                                </div>
+                                <div class="steps">
+                                    <h3> Steps </h3> 
+                                    <ol>
+                                        <li> Preheat the oven to 350°F. </li>
+                                        <li> Cut a circle into the top of the bread. Remove the top and set aside. </li> 
+                                        <li> Hollow out the loaf, reserving insides for later dipping. </li>
+                                        <li> In a medium bowl, mix the cheddar cheese, cream cheese, sour cream, ham, green onions, and worcestershire sauce. </li>
+                                        <li> Spoon into the bread bowl and place the top back on. Wrap the loaf tightly in tin foil and place on a baking sheet. </li>
+                                        <li> Bake until cheese is melted and bubbly (about 1 1/2 hours). </li>
+                                        <li> Meanwhile, cut reserved bread into small cubes. Toss with oil and melted butter. Place on baking sheet and toast in oven until golden brown (about 10 to 15 minutes). </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="title">
+                        <h2 id="applesauce"> Papa Ben's Applesauce </h2>
+                        <a class="printable" href="assets/images/printable_pdfs/applesauce.pdf"> Print Recipe </a>
+                    </div>
+                    <div class="recipe">
+                        <div class="section_visual">
+                            <img src="assets/images/recipes/applesauce.jpg" alt="applesauce" /> 
+                        </div>
+                        <div class="content">
+                            <div class="instructions">
+                                <div class="ingredients">
+                                    <h3> Ingredients </h3> 
+                                    <div class="grid">
+                                        <div class="grid-item"> 10 </div>
+                                        <div class="grid-item"> Large/soft apples (mac, fiji) </div>
+                                        <div class="grid-item"> 3/4 stick </div>
+                                        <div class="grid-item"> Butter </div>
+                                        <div class="grid-item"> 2 tbsp </div>
+                                        <div class="grid-item"> Cinnamon </div>
+                                        <div class="grid-item"> 1/2 cup </div>
+                                        <div class="grid-item"> Water </div>
+                                    </div>
+                                </div>
+                                <div class="steps">
+                                    <h3> Steps </h3> 
+                                    <ol>
+                                        <li> Slice and peel apples. Put them in a large pot. </li>
+                                        <li> Add butter, cinnamon and water to the pot. </li> 
+                                        <li> Cook on medium heat until apples are soft, mixing frequently for about 30 minutes. </li>
+                                        <li> Mash mixture. </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="title">
+                        <h2 id="spinach_salad"> Strawberry Spinach Salad </h2>
+                        <a class="printable" href="assets/images/printable_pdfs/spinach_salad.pdf"> Print Recipe </a>
+                    </div>
+                    <div class="recipe">
+                        <div class="section_visual">
+                            <img src="assets/images/recipes/spinach_salad.jpg" alt="spinach_salad" /> 
+                        </div>
+                        <div class="content">
+                            <div class="instructions">
+                                <div class="ingredients">
+                                    <h3> Ingredients </h3> 
+                                    <div class="grid">
+                                        <div class="grid-item"> 20 oz </div>
+                                        <div class="grid-item"> Baby spinach </div>
+                                        <div class="grid-item"> 1 lbs </div>
+                                        <div class="grid-item"> Strawberries (sliced) </div>
+                                        <div class="grid-item"> 1/4 cup </div>
+                                        <div class="grid-item"> Sugar </div>
+                                        <div class="grid-item"> 2 tbsp </div>
+                                        <div class="grid-item"> Sesame seeds </div>
+                                        <div class="grid-item"> 1 1/2 tsp </div>
+                                        <div class="grid-item"> Worcestershire sauce </div>
+                                        <div class="grid-item"> 1/4 tsp </div>
+                                        <div class="grid-item"> Paprika </div>
+                                        <div class="grid-item"> 1/2 cup </div>
+                                        <div class="grid-item"> Vegetable oil </div>
+                                        <div class="grid-item"> 1/4 cup </div>
+                                        <div class="grid-item"> Apple cider vinegar </div>
+                                    </div>
+                                </div>
+                                <div class="steps">
+                                    <h3> Steps </h3> 
+                                    <ol>
+                                        <li> Combine sugar, sesame seeds, and paprika in a small bowl. Mix to distribute evenly. </li>
+                                        <li> Add worcestershire sauce, vegetable oil and apple cider vinegar. Mix to combine. </li>
+                                        <li> Wash and spin dry baby spinach. Place in a large bowl. Add strawberries to bowl. </li>
+                                        <li> Add dressing and toss with salad. Serves about 6. </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="title">
+                        <h2 id="baked_potatoes"> Twice Baked Potatoes </h2>
+                        <a class="printable" href="assets/images/printable_pdfs/baked_potatoes.pdf"> Print Recipe </a>
+                    </div>
+                    <div class="recipe">
+                        <div class="section_visual">
+                            <img src="assets/images/recipes/baked_potatoes.jpg" alt="baked_potatoes" /> 
+                        </div>
+                        <div class="content">
+                            <div class="instructions">
+                                <div class="ingredients">
+                                    <h3> Ingredients </h3> 
+                                    <div class="grid">
+                                        <div class="grid-item"> 8 </div>
+                                        <div class="grid-item"> Large potatoes </div>
+                                        <div class="grid-item"> 1 stick </div>
+                                        <div class="grid-item"> Butter </div>
+                                        <div class="grid-item"> 1/2 cup </div>
+                                        <div class="grid-item"> Heavy cream or milk </div>
+                                        <div class="grid-item"> 1 8oz pack </div>
+                                        <div class="grid-item"> Cream cheese </div>
+                                        <div class="grid-item"> Some </div>
+                                        <div class="grid-item"> Shredded cheddar </div>
+                                    </div>
+                                </div>
+                                <div class="steps">
+                                    <h3> Steps </h3> 
+                                    <ol>
+                                        <li> Preheat oven to 400°F. </li>
+                                        <li> Wash but do not peel potatoes. Stab 3 holes in each potato with a fork. </li> 
+                                        <li> Put potatoes on tray and bake them for an hour. </li>
+                                        <li> When soft, take out of the oven and cut in half long ways, careful not to break the shell. </li>
+                                        <li> Use a spoon to scoop out the insides into a bowl. Place shells back on tray and preheat oven to 350°F. </li>
+                                        <li> Add room temperature butter and cream cheese to the potato insides. </li>
+                                        <li> Microwave the heavy cream for a minute and then add to mixture. Beat it all together with mixer. </li>
+                                        <li> Put mashed potatoes back in shells and bake 20 minutes. </li>
+                                        <li> Add cheddar cheese to top and bake a few more minutes to melt the cheese. </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </main>
+        <footer>
+            <p class="copyright"> &copy; Alexis Gordon   April 2020 </p>
+        </footer>
+    </body>
+</html>
